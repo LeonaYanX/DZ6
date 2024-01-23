@@ -60,20 +60,29 @@ string GetStringFromCharTable(char[,] table)
 }
 
 
-Console.WriteLine("Enter the row count");
-string strRow = Console.ReadLine();
-strRow ??= "NO DATA";
-int rowCount = EnterIntCycle(strRow);
-Console.WriteLine("Enter the cell count");
-string strCell = Console.ReadLine();
-strCell ??= "NO DATA";
-int cellCount = EnterIntCycle(strCell);
-char[,] tableChar = new char[rowCount,cellCount];
-Console.WriteLine("Text Entering");
-string randomText = Console.ReadLine();
-randomText ??= "NO DATA";
-GetTableChar(tableChar , randomText);
-PrintTable(tableChar);
-string mySTR = GetStringFromCharTable(tableChar);
-Console.WriteLine(mySTR);
+//Console.WriteLine("Enter the row count");
+//string strRow = Console.ReadLine();
+//strRow ??= "NO DATA";
+//int rowCount = EnterIntCycle(strRow);
+//Console.WriteLine("Enter the cell count");
+//string strCell = Console.ReadLine();
+//strCell ??= "NO DATA";
+//int cellCount = EnterIntCycle(strCell);
+//char[,] tableChar = new char[rowCount,cellCount];
+//Console.WriteLine("Text Entering");
+//string randomText = Console.ReadLine();
+//randomText ??= "NO DATA";
+//GetTableChar(tableChar , randomText);
+//PrintTable(tableChar);
+//string mySTR = GetStringFromCharTable(tableChar);
+//Console.WriteLine(mySTR);
+//Console.ReadLine();
+
+
+//Задача 2: Задайте строку, содержащую латинские буквы в обоих регистрах.
+//Сформируйте строку, в которой все заглавные буквы заменены на строчные.
+
+string text = "Hello World";
+string newText = text.ToLower();
+Console.WriteLine(newText);
 Console.ReadLine();
