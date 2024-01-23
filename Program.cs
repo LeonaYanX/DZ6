@@ -82,7 +82,38 @@ string GetStringFromCharTable(char[,] table)
 //Задача 2: Задайте строку, содержащую латинские буквы в обоих регистрах.
 //Сформируйте строку, в которой все заглавные буквы заменены на строчные.
 
-string text = "Hello World";
-string newText = text.ToLower();
-Console.WriteLine(newText);
+//string text = "Hello World";
+//string newText = text.ToLower();
+//Console.WriteLine(newText);
+//Console.ReadLine();
+
+//Задача 3: Задайте произвольную строку. Выясните, является ли она палиндромом.
+
+void PrintCharArray(char[] array) 
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} , ");
+    }
+}
+string text = "123454fghj";
+char[] arrayText = new char[text.Length];
+for (int i = 0; i < arrayText.Length; i++) 
+{
+    arrayText[i] = text[i];
+}
+PrintCharArray(arrayText);
+bool IsPalindrome(char[] array)
+{
+    bool isPalindrome = true;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] != array[array.Length-1-i]) 
+        {
+            isPalindrome = false;
+        }
+    }
+    return isPalindrome;
+}
+Console.WriteLine("-"+IsPalindrome(arrayText));
 Console.ReadLine();
