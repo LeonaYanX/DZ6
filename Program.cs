@@ -96,24 +96,35 @@ void PrintCharArray(char[] array)
         Console.Write($"{array[i]} , ");
     }
 }
-string text = "123454fghj";
-char[] arrayText = new char[text.Length];
-for (int i = 0; i < arrayText.Length; i++) 
+//string text = "123454fghj";
+//char[] arrayText = new char[text.Length];
+//for (int i = 0; i < arrayText.Length; i++) 
+//{
+//  arrayText[i] = text[i];
+//}
+//PrintCharArray(arrayText);
+//bool IsPalindrome(char[] array)
+//{
+//bool isPalindrome = true;
+//for (int i = 0; i < array.Length; i++)
+//{
+//if (array[i] != array[array.Length-1-i]) 
+//{
+//    isPalindrome = false;
+//  }
+//}
+//  return isPalindrome;
+//}
+//Console.WriteLine("-"+IsPalindrome(arrayText));
+//Console.ReadLine();
+
+//Задача 4*: Задайте строку, состоящую из слов, 
+//разделенных пробелами. Сформировать строку, в которой слова расположены в обратном порядке.
+//В полученной строке слова должны быть также разделены пробелами.
+string text = "Hello My Dear World";
+string[] words = text.Split(new char[] { ' ' });
+for (int i = words.Length - 1; i >=0 ; i--)
 {
-    arrayText[i] = text[i];
+    Console.Write(words[i] + "\t");
 }
-PrintCharArray(arrayText);
-bool IsPalindrome(char[] array)
-{
-    bool isPalindrome = true;
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] != array[array.Length-1-i]) 
-        {
-            isPalindrome = false;
-        }
-    }
-    return isPalindrome;
-}
-Console.WriteLine("-"+IsPalindrome(arrayText));
 Console.ReadLine();
